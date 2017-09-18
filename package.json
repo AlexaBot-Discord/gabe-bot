@@ -1,0 +1,21 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "discord.js-music-v11": "^1.3.4",
+    "djs-collection-persistent": "^0.1.3",
+    "ffmpeg-binaries": "^3.2.2-3",
+    "google": "^2.1.0",
+    "moment": "^2.18.1",
+    "node-opus": "^0.2.6",
+    "os-utils": "0.0.14"
+  }
+}
