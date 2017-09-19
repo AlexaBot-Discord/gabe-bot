@@ -12,4 +12,5 @@ exports.run = (client, msg, args, guildConf) => {
     menção.ban(razão+" | "+msg.author.tag);
     msg.delete();
     msg.channel.send(":hammer: |  **Martelei o usuário " + menção.user.tag + " daqui pra fora.**\n**Razão:** " + razão + "\n**Ban enviado por:** "+ msg.author.tag)
+    msg.guild.owner.send(":hammer: |  **Martelei o usuário " + menção.user.tag + " da " + msg.guild.name + " pra fora.**\n**Razão:** " + razão + "\n**Ban enviado por:** " + msg.author.tag)
 }
