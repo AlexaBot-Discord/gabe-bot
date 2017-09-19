@@ -57,6 +57,9 @@ exports.run = (client, msg, args) => {
             },{
                 name: "**$usuario [Usuário]**",
                 value: "<:wonderArrow:338481496211849216>  Mostra variadas informações sobre o usuário mencionado"
+            },{
+                name: "**$perguntar [Sua pergunta]**",
+                value: "<:wonderArrow:338481496211849216>  Me faça uma pergunta! (Todas as respostas são aleatórias)"
             }
         ]
     }}).then(m => m.pin());
