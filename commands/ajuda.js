@@ -1,4 +1,4 @@
-exports.run = (client, msg, args) => {
+exports.run = (client, msg, args, howMany) => {
     msg.delete();
     msg.channel.send({embed: {
         author: {
@@ -6,7 +6,7 @@ exports.run = (client, msg, args) => {
             icon_url: client.user.avatarURL
         },
         color: 0x46be30,
-        description: `**BORK!**\nOlá, eu sou o Gabe-Bot, um bot multi-funções ~~meio inútil~~ completamente em Português (:flag_pt: e :flag_br:, sim -_-)!\nEu fui construido em [Node.js](https://nodejs.org) e minha lib é [Discord.js](https://discord.js.org).\nSe tiver alguma dúvida, eu enviei alguns comandos para sua DM, veja lá!`,
+        description: `**BORK!**\nOlá, eu sou o Gabe-Bot, um bot multi-funções ~~meio inútil~~ completamente em Português (:flag_pt: e :flag_br:, sim -_-)!\nEu fui construido em [Node.js](https://nodejs.org) e minha lib é [Discord.js](https://discord.js.org).\nSe tiver alguma dúvida, eu enviei **${Math.floor(howMany - 2)}** comandos para sua DM, veja lá!`,
         fields: [
             {
                 name: "**Convide o Gabe-Bot para seu server**",

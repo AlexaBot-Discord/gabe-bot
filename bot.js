@@ -2,6 +2,7 @@
 var Discord = require("discord.js");
 var client = new Discord.Client();
 var fs = require("fs");
+var commands = './commands';
 var configuration = {prefix: "$"}
 
 // Events
@@ -9,6 +10,12 @@ client.on("ready", () => {
   console.log(`Ready to serve in ${client.channels.size} channels on ${client.guilds.size} servers, for a total of ${client.users.size} users.`);
   client.user.setGame(`BORK | $ajuda`);  
 });
+
+// How many commands?
+fs.readdir(dir, (err, files) => {
+  var howMany = files.length;
+});
+
 // Commands
 client.on("message", msg => {
   const guildConf = configuration;
@@ -18,7 +25,7 @@ client.on("message", msg => {
   var command = args.shift().slice(guildConf.prefix.length).toLowerCase();
   try {
     let commandFile = require(`./commands/${command}.js`);
-    commandFile.run(client, msg, args, guildConf, fs);
+    commandFile.run(client, msg, args, guildConf, fs, howMany);
     client.guilds.get("330439963193901056").channels.get("337921670796804099").send({embed:{color:0x46be30,author:{name: "Executed command", icon_url: msg.author.avatarURL},description:`**Command \`${command}\` was executed by \`${msg.author.tag}\` on \`${msg.guild.name}\`**`}});
   } catch (err) {
     console.log(err)
