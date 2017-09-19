@@ -1,5 +1,5 @@
 exports.run = (client, msg, args) => {
-    var comandos = 14;
+    var comandos = 15;
     msg.delete();
     msg.channel.send({embed: {
         author: {
@@ -64,6 +64,9 @@ exports.run = (client, msg, args) => {
             },{
                 name: "**$imdb [IMDB Tag]**",
                 value: "<:wonderArrow:338481496211849216>  Pesquise um filme / série pela tag do IMDB"
+            },{
+                name: "**$osu [Usuário do osu!]**",
+                value: "<:wonderArrow:338481496211849216>  Veja todas as estatísticas de um usuário no osu!"
             }
         ]
     }}).then(m => m.pin());
