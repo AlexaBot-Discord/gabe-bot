@@ -27,4 +27,4 @@ client.on("message", msg => {
 });
 
 // Login
-client.login(config.bot);
+client.login(process.env.BOT);
