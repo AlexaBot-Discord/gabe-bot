@@ -2,7 +2,7 @@
 var Discord = require("discord.js");
 var client = new Discord.Client();
 var fs = require("fs");
-var commands = './commands';
+var dir = './commands';
 var configuration = {prefix: "$"}
 
 // Events
