@@ -1,5 +1,5 @@
 exports.run = (client, msg, args) => {
-    var comandos = 13;
+    var comandos = 14;
     msg.delete();
     msg.channel.send({embed: {
         author: {
@@ -61,6 +61,9 @@ exports.run = (client, msg, args) => {
             },{
                 name: "**$perguntar [Sua pergunta]**",
                 value: "<:wonderArrow:338481496211849216>  Me faça uma pergunta! (Todas as respostas são aleatórias)"
+            },{
+                name: "**$imdb [IMDB Tag]**",
+                value: "<:wonderArrow:338481496211849216>  Pesquise um filme / série pela tag do IMDB"
             }
         ]
     }}).then(m => m.pin());
