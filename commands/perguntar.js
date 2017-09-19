@@ -9,10 +9,7 @@ exports.run = (client, msg, args) => {
     msg.delete();
     msg.channel.send({embed:{
         color: 0x46be30,
-        title: {
-            name: "Perguntas & Respostas",
-            icon_url: client.user.avatarURL
-        },
+        title: "Perguntas & Respostas",
         fields: [
             {
                 name: "Pergunta: " + args.join(" "),
