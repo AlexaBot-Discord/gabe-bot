@@ -13,6 +13,10 @@ exports.run = (client, msg, args) => {
                 name: "**Acesse o Website do Gabe-Bot**",
                 value: "[Clique aqui](https://pillgp.github.io/gabe-website/index.html)",
                 inline: true
+            },{
+                name: "**Entre no servidor do Gabe**",
+                value: "[Clique aqui](https://discord.gg/y9ZvmJb)",
+                inline: true
             }
         ],
         footer: {
