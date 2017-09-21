@@ -10,12 +10,8 @@ exports.run = (client, msg, args) => {
         description: `**BORK!**\nOlá, eu sou o Gabe-Bot, um bot multi-funções ~~meio inútil~~ completamente em Português (:flag_pt: e :flag_br:, sim -_-)!\nEu fui construido em [Node.js](https://nodejs.org) e minha lib é [Discord.js](https://discord.js.org).\nSe tiver alguma dúvida, eu enviei **${Math.floor(comandos - 3)}** comandos para sua DM, veja lá!`,
         fields: [
             {
-                name: "**Convide o Gabe-Bot para seu server**",
-                value: "[Clique aqui](https://goo.gl/t4d3Vd)",
-                inline: true
-            },{
-                name: "**Envie sugestões para o Gabe-Bot**",
-                value: "**$feedback sugestão**",
+                name: "**Acesse o Website do Gabe-Bot**",
+                value: "[Clique aqui](https://pillgp.github.io/gabe-website/index.html)",
                 inline: true
             }
         ],
