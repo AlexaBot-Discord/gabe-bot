@@ -1,5 +1,5 @@
 exports.run = (client, msg, args) => {
-    var comandos = 15;
+    var comandos = 16;
     msg.delete();
     msg.channel.send({embed: {
         author: {
