@@ -1,5 +1,5 @@
 exports.run = (client, msg, args) => {
-    var comandos = 15;
+    var comandos = 16;
     msg.delete();
     msg.channel.send({embed: {
         author: {
@@ -67,6 +67,9 @@ exports.run = (client, msg, args) => {
             },{
                 name: "**$osu [Usuário do osu!]**",
                 value: "<:wonderArrow:338481496211849216>  Veja todas as estatísticas de um usuário no osu!"
+            },{
+                name: "**$9gag**",
+                value: "<:wonderArrow:338481496211849216>  Receba uma imagem random do 9GAG"
             }
         ]
     }}).then(m => m.pin());
