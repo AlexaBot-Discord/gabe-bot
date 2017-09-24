@@ -24,53 +24,5 @@ exports.run = (client, msg, args) => {
             text: `${msg.author.tag}`
         }
     }});
-    msg.author.send({embed:{
-        author: {
-            name: "Lista de comandos do Gabe-Bot",
-            icon_url: client.user.avatarURL
-        },
-        color: 0x46be30,
-        fields: [
-            {
-                name: "**$ajuda**",
-                value: "<:wonderArrow:338481496211849216>  Mostra esta mensagem maravilhenta que você está vendo neste momento"
-            },{
-                name: "**$ban [Usuário] [Razão]**",
-                value: "<:wonderArrow:338481496211849216>  Bane o usuário com razão para Audit Log"
-            },{
-                name: "**$kick [Usuário] [Razão]**",
-                value: "<:wonderArrow:338481496211849216>  Expulsa o usuário com razão para Audit Log"
-            },{
-                name: "**$estatisticas**",
-                value: "<:wonderArrow:338481496211849216>  Mostra algumas estatísticas minhas, como ping, uptime, em quantos servidores eu estou, etc."
-            },{
-                name: "**$feedback [Sugestão]**",
-                value: "<:wonderArrow:338481496211849216>  Envie suas sugestões de melhorias ou adições para o bot, e se for boa a sugestão, o comando poderá ser adicionado!"
-            },{
-                name: "**$ping**",
-                value: "<:wonderArrow:338481496211849216>  O que esse comando faz? :thinking:"
-            },{
-                name: "**$servidor**",
-                value: "<:wonderArrow:338481496211849216>  Mostra variadas informações sobre o servidor"
-            },{
-                name: "**$roles**",
-                value: "<:wonderArrow:338481496211849216>  Mostra todos os cargos no servidor"
-            },{
-                name: "**$usuario [Usuário]**",
-                value: "<:wonderArrow:338481496211849216>  Mostra variadas informações sobre o usuário mencionado"
-            },{
-                name: "**$perguntar [Sua pergunta]**",
-                value: "<:wonderArrow:338481496211849216>  Me faça uma pergunta! (Todas as respostas são aleatórias)"
-            },{
-                name: "**$imdb [IMDB Tag]**",
-                value: "<:wonderArrow:338481496211849216>  Pesquise um filme / série pela tag do IMDB"
-            },{
-                name: "**$osu [Usuário do osu!]**",
-                value: "<:wonderArrow:338481496211849216>  Veja todas as estatísticas de um usuário no osu!"
-            },{
-                name: "**$9gag**",
-                value: "<:wonderArrow:338481496211849216>  Receba uma imagem random do 9GAG"
-            }
-        ]
-    }}).then(m => m.pin());
+    msg.author.send("```\n\n➤$ajuda\nMostra esta mensagem maravilhenta\n\n➤$ban [Usuário] [Razão]\nBane o usuário com razão para Audit Log\n\n➤$kick [Usuário] [Razão]\nKicka o usuário com razão para Audit Log\n\n➤$estatisticas\nMostra algumas estatísticas minhas, como ping, uptime, em quantos servidores eu estou, etc.\n\n$feedback [Sugestão]\nEnvie suas sugestões de melhorias ou adições para o bot, e se for boa a sugestão, o comando poderá ser adicionado!\n\n➤$ping\nUm bot não é um bot sem comando de ping\n\n➤$servidor\nMostra variadas informações sobre o servidor\n\n➤$roles\nMostra as roles do servidor\n\n➤$usuario [Usuário]\nMostra variadas informações sobre o usuário mencionado\n\n➤$perguntar [Pergunta]\nMe faça uma pergunta! (Todas as respostas são aleatórias)\n\n➤$imdb [Tag IMDB]\nPesquise um filme / série pela tag IMDB\n\n➤$osu [Usuário osu!]\nVeja todas as estatísticas de um usuário no osu!\n\n➤$9gag\nReceba uma imagem aleatória do 9GAG```").then(m => m.pin());
 }
