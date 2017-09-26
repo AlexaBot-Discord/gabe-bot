@@ -3,8 +3,6 @@ var Discord = require("discord.js");
 var client = new Discord.Client();
 var fs = require("fs");
 var guildConf = {prefix: "$"};
-const sql = require("sqlite");
-sql.open("./score.sqlite");
 
 // Events
 client.on("ready", () => {
