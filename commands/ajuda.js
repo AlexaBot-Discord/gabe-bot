@@ -1,5 +1,5 @@
 exports.run = (client, msg, args) => {
-    var comandos = 17;
+    var comandos = 19;
     var cmds = Math.floor(comandos - 3);
     msg.delete();
     msg.channel.send("**BORK!**\nOlá, eu sou o Gabe-Bot, um bot multi-funções ~~meio inútil~~ completamente em Português!\nEnviei para você uma lista com **"+cmds+"** comandos na DM, vá ver!\n\n➤ Meu repositório (Github): **<https://github.com/PillGP/gabe-bot>**\n\n➤ Venha para o meu servidor: **https://discord.gg/y9ZvmJb**\n\n➤ Convide-me para seu servidor: **<https://goo.gl/t4d3Vd>**");
@@ -52,6 +52,12 @@ exports.run = (client, msg, args) => {
             },{
                 name: "**$habbo**",
                 value: "➤ Receba um meme de Habbo aleatório [Sugestão: Nekroッ#4893]"
+            },{
+                name: "**$nivel**",
+                value: "➤ Saiba seu nível no meu sistema de pontos! [Sugestão: Rannii#2991]"
+            },{
+                name: "**$pontos**",
+                value: "➤ Saiba seus pontos no meu sistema de pontos! [Sugestão: Rannii#2991]"
             }
         ]
 }}).then(m => m.pin());
