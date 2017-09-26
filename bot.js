@@ -1,16 +1,34 @@
-// Dependencies
+// ----------------------
+//
+// Start Dependencies
+
 var Discord = require("discord.js");
 var client = new Discord.Client();
 var fs = require("fs");
 var guildConf = {prefix: "$"};
+client.login(process.env.BOT);
 
-// Events
+// End Dependencies
+//
+// ----------------------
+//
+// Start Events
+
 client.on("ready", () => {
   console.log(`Ready to serve in ${client.channels.size} channels on ${client.guilds.size} servers, for a total of ${client.users.size} users.`);
   client.user.setGame(`BORK | $ajuda`);  
 });
 
-// Commands
+client.on("guildCreate", guild => {
+  guild.owner.send("**BORK!**\nOlá, eu sou o Gabe-Bot, um bot multi-funções ~~meio inútil~~ completamente em Português!\nObrigado por me ter adicionado ao seu servidor, caso queira uma lista de comandos, faça ``$ajuda`` no seu servidor! :smile:\n\n➤ Meu repositório (Github): **<https://github.com/PillGP/gabe-bot>**\n\n➤ Venha para o meu servidor: **https://discord.gg/y9ZvmJb**\n\n➤ Convide-me para seu servidor: **<https://goo.gl/t4d3Vd>**");
+});
+
+// End Events
+//
+// ----------------------
+//
+// Start Commands
+
 client.on("message", msg => {
   if(!msg.guild || msg.author.bot) return;
   if(msg.content.indexOf(guildConf.prefix) !== 0) return;
@@ -25,5 +43,6 @@ client.on("message", msg => {
   };
 });
 
-// Login
-client.login(process.env.BOT);
+// End Commands
+//
+// ----------------------
