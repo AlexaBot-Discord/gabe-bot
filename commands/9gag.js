@@ -1,5 +1,5 @@
 exports.run = (client, msg, args) => {
-    var gagScraper = require('9gag-scraper');
+    const gagScraper = require('9gag-scraper');
     msg.delete();
     new gagScraper().getRandom(function (error, data) {
         msg.channel.send({embed:{

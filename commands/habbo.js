@@ -1,5 +1,5 @@
 exports.run = (client, msg, args) => {
-    var habbo = [
+    const habbo = [
         "https://scontent.flis6-1.fna.fbcdn.net/v/t1.0-9/21765175_1465241263559140_7265295306469713839_n.jpg?oh=325cb81cb2b4926b80cf97e67b78a934&oe=5A484BFC",
         "https://scontent.flis6-1.fna.fbcdn.net/v/t1.0-9/21686469_1464836780266255_4744126702382239937_n.png?oh=6414fb1ece1a31cd858b93dc2e9bf9f6&oe=5A455349",
         "https://scontent.flis6-1.fna.fbcdn.net/v/t1.0-9/21686221_1464373233645943_940120102569568702_n.png?oh=5751abd3eb7114309477e160b0ca345f&oe=5A47E638",
@@ -29,7 +29,7 @@ exports.run = (client, msg, args) => {
         "https://scontent.flis6-1.fna.fbcdn.net/v/t1.0-9/21077671_1438651989551401_6481903783034931386_n.png?oh=16efe1b4f7e4ba90d1465748f93c3d42&oe=5A3F0FFA",
         "https://scontent.flis6-1.fna.fbcdn.net/v/t1.0-9/21032554_1437170846366182_5689809443393429188_n.png?oh=8cddba3ab4adf73d73744ec8ac4aba25&oe=5A82EC9A"
     ];
-    var randomHabbo = Math.floor(Math.random()*habbo.length);
+    const randomHabbo = Math.floor(Math.random()*habbo.length);
     msg.delete();
     msg.channel.send({embed:{
         color: 0x46be30,

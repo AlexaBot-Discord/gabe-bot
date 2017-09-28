@@ -1,6 +1,6 @@
 exports.run = (client, msg, args) => {
-    var moment = require("moment");
-    var guild = msg.guild;
+    const moment = require("moment");
+    const guild = msg.guild;
     msg.delete();
     msg.channel.send({embed: {
         author: {

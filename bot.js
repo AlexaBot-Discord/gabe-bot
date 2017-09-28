@@ -2,10 +2,10 @@
 //
 // Start Dependencies
 
-var Discord = require("discord.js");
-var client = new Discord.Client();
-var fs = require("fs");
-var guildConf = {prefix: "$"};
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const fs = require("fs");
+const guildConf = {prefix: "$"};
 client.login(process.env.BOT);
 
 // End Dependencies
@@ -32,8 +32,8 @@ client.on("guildCreate", guild => {
 client.on("message", msg => {
   if(!msg.guild || msg.author.bot) return;
   if(msg.content.indexOf(guildConf.prefix) !== 0) return;
-  var args = msg.content.split(/\s+/g);
-  var command = args.shift().slice(guildConf.prefix.length).toLowerCase();
+  const args = msg.content.split(/\s+/g);
+  const command = args.shift().slice(guildConf.prefix.length).toLowerCase();
   try {
     let commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, msg, args, guildConf, fs);

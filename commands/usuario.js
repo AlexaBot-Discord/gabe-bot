@@ -1,32 +1,32 @@
 exports.run = (client, msg, args) => {
-    var menção = msg.mentions.members.first();
-    var moment = require('moment');
+    const menção = msg.mentions.members.first();
+    const moment = require('moment');
     if(!menção) {
         msg.delete();
         return msg.channel.send("**<:wonderExclamation:332685258623287296>|  Define uma menção válida**");
     };
     if(menção.user.bot) {
-        var yn = "Verdadeiro"
+        const yn = "Verdadeiro"
     } else {
-        var yn = "Falso"
+        const yn = "Falso"
     }
     if(menção.presence.status === "online") {
-        var estado = "Disponível";
-        var barra = "4238459"
+        const estado = "Disponível";
+        const barra = "4238459"
     } else if(menção.presence.status === "dnd") {
-        var estado = "Não perturbe";
-        var barra = "15746887"
+        const estado = "Não perturbe";
+        const barra = "15746887"
     } else if(menção.presence.status === "idle") {
-        var estado = "Ausente";
-        var barra = "16426522"
+        const estado = "Ausente";
+        const barra = "16426522"
     } else if(menção.presence.status === "offline") {
-        var estado = "Invisível";
-        var barra = "7634829"
+        const estado = "Invisível";
+        const barra = "7634829"
     }
     if(!menção.presence.game || !menção.presence.game.name) {
-        var playing = "Nada"
+        const playing = "Nada"
     } else {
-        var playing = menção.presence.game.name
+        const playing = menção.presence.game.name
     }
     msg.delete();
     msg.channel.send({embed: {

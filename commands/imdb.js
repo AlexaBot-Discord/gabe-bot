@@ -1,5 +1,5 @@
 exports.run = (client, msg, args) => {
-    var imdb = require('imdb');
+    const imdb = require('imdb');
     imdb(args[0], function(err, data) {
         if(data) {
             msg.delete();

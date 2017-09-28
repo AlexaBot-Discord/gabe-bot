@@ -1,14 +1,14 @@
 exports.run = (client, msg, args) => {
-    var osu = require('node-osu');
-    var osuApi = new osu.Api(process.env.OSU);
+    const osu = require('node-osu');
+    const osuApi = new osu.Api(process.env.OSU);
     function numberWithCommas(x) {
-        var parts = x.toString().split(".");
+        const parts = x.toString().split(".");
         parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         return parts.join(".");
     }
     msg.delete();
     osuApi.getUser({u: args.join(" ")}).then(user => {
-        var pais = user.country;
+        const pais = user.country;
         msg.channel.send({embed:{
             color: 0x46be30,
             author: {

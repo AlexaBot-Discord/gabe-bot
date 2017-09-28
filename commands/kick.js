@@ -1,6 +1,6 @@
 exports.run = (client, msg, args, guildConf) => {
-    var menção = msg.mentions.members.first();
-    var razão = msg.content.split(/\s+/g).slice(2).join(" ");
+    const menção = msg.mentions.members.first();
+    const razão = msg.content.split(/\s+/g).slice(2).join(" ");
     if(msg.content === guildConf.prefix + "kick") {
         msg.delete();
         return msg.channel.send("<:wonderExclamation:332685258623287296> |  **Me fala o usuário que eu vou chutar a bunda**");
