@@ -53,9 +53,6 @@ exports.run = (client, msg, args) => {
             },{
                 name: "**$habbo**",
                 value: "➤ Receba um meme de Habbo aleatório [Sugestão: Nekroッ#4893]"
-            },{
-                name: "**$yt [Vídeo no YouTube]**",
-                value: "➤ Pesquise um vídeo no YouTube diretamente pelo Discord"
             }
         ]
     }}).then(m => m.pin());
