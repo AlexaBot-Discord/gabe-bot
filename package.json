@@ -14,6 +14,7 @@
     "moment": "^2.18.1",
     "node-osu": "^1.3.0",
     "os-utils": "0.0.14",
-    "9gag-scraper": "1.0.1"
+    "9gag-scraper": "1.0.1",
+    "youtube-search": "1.0.10"
   }
 }
