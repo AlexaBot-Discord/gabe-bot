@@ -1,8 +1,10 @@
 exports.run = (client, msg, args) => {
-    const comandos = 18;
-    const cmds = Math.floor(comandos - 3);
-    msg.delete();
+    const comandos = 17;
+    const cmds = Math.floor(comandos - 2);
+    msg.channel.startTyping();
     msg.channel.send("**BORK!**\nOlá, eu sou o Gabe-Bot, um bot multi-funções ~~meio inútil~~ completamente em Português!\nEnviei para você uma lista com **"+cmds+"** comandos na DM, vá ver!\n\n➤ Meu repositório (Github): **<https://github.com/PillGP/gabe-bot>**\n\n➤ Venha para o meu servidor: **https://discord.gg/y9ZvmJb**\n\n➤ Convide-me para seu servidor: **<https://goo.gl/t4d3Vd>**");
+    msg.channel.stopTyping();
+    msg.author.startTyping();
     msg.author.send({embed:{
         author: {
             name: "Lista de comandos do Gabe-Bot",
@@ -57,5 +59,6 @@ exports.run = (client, msg, args) => {
                 value: "➤ Pesquise um vídeo no YouTube diretamente pelo Discord"
             }
         ]
-}}).then(m => m.pin());
+    }}).then(m => m.pin());
+    msg.author.stopTyping();
 }

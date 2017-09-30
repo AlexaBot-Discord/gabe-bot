@@ -6,9 +6,9 @@ exports.run = (client, msg, args) => {
         parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         return parts.join(".");
     }
-    msg.delete();
     osuApi.getUser({u: args.join(" ")}).then(user => {
         const pais = user.country;
+        msg.channel.startTyping();
         msg.channel.send({embed:{
             color: 0x46be30,
             author: {
@@ -61,6 +61,7 @@ exports.run = (client, msg, args) => {
             thumbnail: {
                 url: "https://a.ppy.sh/"+user.id
             }
-        }})
+        }});
+        msg.channel.stopTyping();
     });
 }

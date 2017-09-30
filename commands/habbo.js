@@ -30,7 +30,7 @@ exports.run = (client, msg, args) => {
         "https://scontent.flis6-1.fna.fbcdn.net/v/t1.0-9/21032554_1437170846366182_5689809443393429188_n.png?oh=8cddba3ab4adf73d73744ec8ac4aba25&oe=5A82EC9A"
     ];
     const randomHabbo = Math.floor(Math.random()*habbo.length);
-    msg.delete();
+    msg.channel.startTyping();
     msg.channel.send({embed:{
         color: 0x46be30,
         image: {
@@ -41,4 +41,5 @@ exports.run = (client, msg, args) => {
             text: `${msg.author.tag} | © Brazilian Habbo Memes / 2017`
         }
     }});
+    msg.channel.stopTyping();
 }

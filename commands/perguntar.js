@@ -6,7 +6,7 @@ exports.run = (client, msg, args) => {
         'Não tenho certeza disso, brother'
     ];
     const rand = respostas[Math.floor(Math.random() * respostas.length)];
-    msg.delete();
+    msg.channel.startTyping();
     msg.channel.send({embed:{
         color: 0x46be30,
         fields: [
@@ -20,4 +20,5 @@ exports.run = (client, msg, args) => {
             text: `${msg.author.tag}`
         },
     }});
+    msg.channel.stopTyping();
 }

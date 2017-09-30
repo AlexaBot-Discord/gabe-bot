@@ -2,7 +2,7 @@ exports.run = (client, msg, args) => {
     const imdb = require('imdb');
     imdb(args[0], function(err, data) {
         if(data) {
-            msg.delete();
+            msg.channel.startTyping();
             msg.channel.send({embed:{
                 color: 0x46be30,
                 title: data.title+" ("+data.year+")",
@@ -15,10 +15,12 @@ exports.run = (client, msg, args) => {
                     text: `${msg.author.tag}`
                 },
             }});
+            msg.channel.stopTyping();
         }
         if(err) {
-            msg.delete();
+            msg.channel.startTyping();
             msg.channel.send("**:x: | ERRO*\n```"+err.stack+"```");
+            msg.channel.stopTyping();
         }
     })
 }

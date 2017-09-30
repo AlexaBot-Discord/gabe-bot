@@ -2,8 +2,9 @@ exports.run = (client, msg, args) => {
     const menção = msg.mentions.members.first();
     const moment = require('moment');
     if(!menção) {
-        msg.delete();
-        return msg.channel.send("**<:wonderExclamation:332685258623287296>|  Define uma menção válida**");
+        msg.channel.startTyping();
+        msg.channel.send("**<:wonderExclamation:332685258623287296>  Defina uma menção válida**");
+        return msg.channel.stopTyping();
     };
     if(menção.user.bot) {
         const yn = "Verdadeiro"
@@ -28,7 +29,7 @@ exports.run = (client, msg, args) => {
     } else {
         const playing = menção.presence.game.name
     }
-    msg.delete();
+    msg.channel.startTyping();
     msg.channel.send({embed: {
     color: barra,
     thumbnail: {
@@ -48,4 +49,5 @@ exports.run = (client, msg, args) => {
         text: `${msg.author.tag}`
     }
     }});
+    msg.channel.stopTyping();
 }
