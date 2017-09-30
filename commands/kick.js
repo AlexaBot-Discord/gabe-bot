@@ -15,7 +15,5 @@ exports.run = (client, msg, args, guildConf) => {
     msg.channel.startTyping();
     msg.channel.send(":boot: |  **Chutei a bunda do " + menção.user.tag + " daqui pra fora.**\n**Razão:** " + razão + "\n**Kick enviado por:** " + msg.author.tag);
     msg.channel.stopTyping();
-    msg.guild.owner.startTyping();
     msg.guild.owner.send(":boot: |  **Chutei a bunda do " + menção.user.tag + " da " + msg.guild.name + " pra fora.**\n**Razão:** " + razão + "\n**Kick enviado por:** " + msg.author.tag);
-    msg.guild.owner.stopTyping();
 }
