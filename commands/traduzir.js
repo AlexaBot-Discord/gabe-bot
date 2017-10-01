@@ -2,6 +2,7 @@ exports.run = (client, msg, args) => {
     const translate = require('google-translate-api');
     const text = args.join(" ");
     translate(text, {to: 'en'}).then(res => {
+       msg.channel.startTyping();
        msg.channel.send({embed:{
            color: 0x46be30,
            description: ":flag_"+res.from.language.iso+": ➤ *"+text+"*\n:flag_us: ➤ *"+res.text+"*",
@@ -10,6 +11,7 @@ exports.run = (client, msg, args) => {
              text: `${msg.author.tag}`
            }
        }});
+       msg.channel.stopTyping();
    }).catch(err => {
       msg.channel.startTyping();
       msg.channel.send("**:x: | ERRO**\n```"+err+"```");
