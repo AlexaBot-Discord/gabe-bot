@@ -15,7 +15,6 @@ String.prototype.toHHMMSS = function () {
     const os = require('os-utils');
     const moment = require('moment');
     const sistema = os.sysUptime();
-    msg.channel.startTyping();
     msg.channel.send("...").then(m => m.edit({embed: {
         author: {
             name: "Estatísticas do " + client.user.username,
@@ -54,5 +53,4 @@ String.prototype.toHHMMSS = function () {
             text: `${msg.author.tag}`
         }
     }}));
-    msg.channel.stopTyping();
 }
