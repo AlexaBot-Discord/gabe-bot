@@ -6,6 +6,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 const guildConf = {prefix: "$"};
+const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
 client.login(process.env.BOT);
 
 // End Dependencies
@@ -20,7 +21,7 @@ client.on("ready", () => {
 });
 
 client.on("guildCreate", guild => {
-  guild.owner.send("**BORK!**\nOlá, eu sou o Gabe-Bot, um bot multi-funções ~~meio inútil~~ completamente em Português!\nObrigado por me ter adicionado ao seu servidor, caso queira uma lista de comandos, faça ``$ajuda`` no seu servidor! :smile:\n\n➤ Meu repositório (Github): **<https://github.com/PillGP/gabe-bot>**\n\n➤ Venha para o meu servidor: **https://discord.gg/y9ZvmJb**\n\n➤ Convide-me para seu servidor: **<https://goo.gl/t4d3Vd>**");
+  defaultChannel.send("**BORK!**\nOlá, eu sou o Gabe-Bot, um bot multi-funções ~~meio inútil~~ completamente em Português!\nObrigado por me ter adicionado ao seu servidor, caso queira uma lista de comandos, faça ``$ajuda`` no seu servidor! :smile:\n\n➤ Meu repositório (Github): **<https://github.com/PillGP/gabe-bot>**\n\n➤ Venha para o meu servidor: **https://discord.gg/y9ZvmJb**\n\n➤ Convide-me para seu servidor: **<https://goo.gl/t4d3Vd>**");
 });
 
 // End Events
