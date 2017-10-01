@@ -15,7 +15,8 @@ String.prototype.toHHMMSS = function () {
     const os = require('os-utils');
     const moment = require('moment');
     const sistema = os.sysUptime();
-    msg.channel.send("...").then(m => m.edit({embed: {
+    msg.channel.startTyping();
+    msg.channel.send({embed: {
         author: {
             name: "Estatísticas do " + client.user.username,
             icon_url: client.user.avatarURL
@@ -24,27 +25,27 @@ String.prototype.toHHMMSS = function () {
         fields: [
             {
                 name: ":cityscape: | **Servidores**",
-                value: "```" + client.guilds.size + "```",
+                value: client.guilds.size,
                 inline: true
             },{
                 name: ":hash: | **Canais**",
-                value: "```" + client.channels.size + "```",
+                value: client.channels.size,
                 inline: true
             },{
                 name: ":busts_in_silhouette: | **Usuários**",
-                value: "```" + client.users.size + "```",
+                value: client.users.size,
                 inline: true
             },{
                 name: ":signal_strength: | **Ping**",
-                value: "```" + `Ping: ${m.createdTimestamp - msg.createdTimestamp}ms\nHeartbeat: ${Math.round(client.ping)}ms` + "```",
+                value: `${Math.round(client.ping)}ms`,
                 inline: true
             },{
                 name: ":electric_plug: | **Uptime do Bot**",
-                value: "```" + os.processUptime().toString().toHHMMSS() + "```",
+                value: os.processUptime().toString().toHHMMSS(),
                 inline: true
             },{
                 name: ":control_knobs: | **Uptime da Máquina**",
-                value: "```" + sistema.toString().toHHMMSS() + "```",
+                value: sistema.toString().toHHMMSS(),
                 inline: true
             }
         ],
@@ -52,5 +53,6 @@ String.prototype.toHHMMSS = function () {
             icon_url: msg.author.avatarURL,
             text: `${msg.author.tag}`
         }
-    }}));
+    }});
+    msg.channel.stopTyping();
 }
