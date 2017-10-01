@@ -30,8 +30,7 @@ client.on("guildCreate", guild => {
 // Start Commands
 
 client.on("message", msg => {
-  if(!msg.guild || msg.author.bot) return;
-  if(msg.content.indexOf(guildConf.prefix) !== 0) return;
+  if(!msg.guild || msg.author.bot || msg.content.indexOf(guildConf.prefix) !== 0) return;
   const args = msg.content.split(/\s+/g);
   const command = args.shift().slice(guildConf.prefix.length).toLowerCase();
   try {
