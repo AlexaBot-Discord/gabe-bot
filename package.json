@@ -16,6 +16,7 @@
     "os-utils": "0.0.14",
     "9gag-scraper": "1.0.1",
     "youtube-search": "1.0.10",
-    "snekfetch": "3.4.2"
+    "snekfetch": "3.4.2",
+    "google-translate-api": "^2.3.0"
   }
 }

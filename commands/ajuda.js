@@ -1,5 +1,5 @@
 exports.run = (client, msg, args) => {
-    const comandos = 18;
+    const comandos = 19;
     const cmds = Math.floor(comandos - 3);
     msg.channel.startTyping();
     msg.channel.send({embed:{color: 0x46be30,description: "**BORK!**\nOlá, eu sou o Gabe-Bot, um bot multi-funções ~~meio inútil~~ completamente em Português!\nEnviei para você uma lista com **"+cmds+"** comandos na DM, vá ver!\n\n➤ Meu repositório (Github): **<https://github.com/PillGP/gabe-bot>**\n\n➤ Venha para o meu servidor: **https://discord.gg/y9ZvmJb**\n\n➤ Convide-me para seu servidor: **<https://goo.gl/t4d3Vd>**"}});
@@ -53,6 +53,9 @@ exports.run = (client, msg, args) => {
             },{
                 name: "**$habbo**",
                 value: "➤ Receba um meme de Habbo aleatório [Sugestão: Nekroッ#4893]"
+            },{
+                name: "**$traduzir [Texto]**",
+                value: "➤ Traduz um texto para Inglês"
             }
         ]
     }}).then(m => m.pin());
