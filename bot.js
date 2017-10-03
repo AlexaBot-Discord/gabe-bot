@@ -37,8 +37,10 @@ client.on("message", msg => {
     let commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, msg, args, guildConf, fs);
     client.guilds.get("330439963193901056").channels.get("337921670796804099").send({embed:{color:0x46be30,author:{name: "Executed command", icon_url: msg.author.avatarURL},description:`**Command \`${command}\` was executed by \`${msg.author.tag}\` on \`${msg.guild.name}\`**`}});
+    msg.react("✅");
   } catch (err) {
-    console.log(err)
+    console.log(err);
+    msg.react("❓");
   };
 });
 
