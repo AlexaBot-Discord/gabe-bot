@@ -12,49 +12,49 @@ exports.run = (client, msg, args) => {
         color: 0x46be30,
         fields: [
             {
-                name: "**$ajuda**",
+                name: "**g$ajuda**",
                 value: "➤ Mostra esta mensagem maravilhenta que você está vendo neste momento"
             },{
-                name: "**$ban [Usuário] [Razão]**",
+                name: "**g$ban [Usuário] [Razão]**",
                 value: "➤ Bane o usuário com razão para Audit Log"
             },{
-                name: "**$kick [Usuário] [Razão]**",
+                name: "**g$kick [Usuário] [Razão]**",
                 value: "➤ Expulsa o usuário com razão para Audit Log"
             },{
-                name: "**$estatisticas**",
+                name: "**g$estatisticas**",
                 value: "➤ Mostra algumas estatísticas minhas, como ping, uptime, em quantos servidores eu estou, etc."
             },{
-                name: "**$feedback [Sugestão]**",
+                name: "**g$feedback [Sugestão]**",
                 value: "➤ Envie suas sugestões de melhorias ou adições para o bot, e se for boa a sugestão, o comando poderá ser adicionado!"
             },{
-                name: "**$ping**",
+                name: "**g$ping**",
                 value: "➤ O que esse comando faz? :thinking:"
             },{
-                name: "**$servidor**",
+                name: "**g$servidor**",
                 value: "➤ Mostra variadas informações sobre o servidor"
             },{
-                name: "**$roles**",
+                name: "**g$roles**",
                 value: "➤ Mostra todos os cargos no servidor"
             },{
-                name: "**$usuario [Usuário]**",
+                name: "**g$usuario [Usuário]**",
                 value: "➤ Mostra variadas informações sobre o usuário mencionado"
             },{
-                name: "**$perguntar [Sua pergunta]**",
+                name: "**g$perguntar [Sua pergunta]**",
                 value: "➤ Me faça uma pergunta! (Todas as respostas são aleatórias)"
             },{
-                name: "**$imdb [IMDB Tag]**",
+                name: "**g$imdb [IMDB Tag]**",
                 value: "➤ Pesquise um filme / série pela tag do IMDB"
             },{
-                name: "**$osu [Usuário do osu!]**",
+                name: "**g$osu [Usuário do osu!]**",
                 value: "➤ Veja todas as estatísticas de um usuário no osu!"
             },{
-                name: "**$9gag**",
+                name: "**g$9gag**",
                 value: "➤ Receba uma imagem aleatória do 9GAG"
             },{
-                name: "**$habbo**",
+                name: "**g$habbo**",
                 value: "➤ Receba um meme de Habbo aleatório [Sugestão: Nekroッ#4893]"
             },{
-                name: "**$traduzir [Texto]**",
+                name: "**g$traduzir [Texto]**",
                 value: "➤ Traduz um texto para Inglês"
             }
         ]

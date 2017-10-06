@@ -5,7 +5,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
-const guildConf = {prefix: "$"};
+const guildConf = {prefix: "g$"};
 client.login(process.env.BOT);
 
 // End Dependencies
@@ -16,7 +16,7 @@ client.login(process.env.BOT);
 
 client.on("ready", () => {
   console.log(`Ready to serve in ${client.channels.size} channels on ${client.guilds.size} servers, for a total of ${client.users.size} users.`);
-  client.user.setGame(`BORK | $ajuda`);  
+  client.user.setGame(`BORK | g$ajuda`);  
 });
 
 client.on("guildCreate", guild => {
